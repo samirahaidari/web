@@ -1,49 +1,214 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Pagina Web</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mi Página Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      
+    }
+
+    /* Background & body */
+    body {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb);
+      color: #7c8942;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: rgb(255, 253, 253);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Main container */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* Profile */
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    .profile p {
+      font-size: 18px;
+      margin-top: 1rem;
+      color: #34495e;
+    }
+
+    /* Tasks section */
+    .tasks {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .task-list {
+      background: rgba(255,255,255,0.95);
+      padding: 1.5rem;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      width: 40%;
+      transition: transform 0.3s ease;
+    }
+
+    .task-list:hover {
+      transform: translateY(-5px);
+    }
+
+    .task-list h2 {
+      margin-bottom: 1rem;
+      color: #2575fc;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .task-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .task-list li {
+      padding: 12px;
+      margin: 8px 0;
+      background: #ffeaa7;
+      border-radius: 10px;
+      font-weight: 500;
+      text-align: center;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .task-list li:hover {
+      background: #fdcb6e;
+      transform: scale(1.02);
+    }
+
+    /* Image section */
+    .image-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 25px;
+      background: rgba(0,0,0,0.05);
+      border-radius: 14px;
+      color: #2c3e50;
+      font-size: 15px;
+    }
+  </style>
 </head>
-
 <body>
-  <div>
-    
-    <H1> Hola, welcome! </H1>
 
-    <img class="imagen_perfil" src="cat.webp" alt="" srcset="">
+  <header>
+    <h1>Hola, Bienvenidos!</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="https://supermercado.eroski.es/" target="_blank">Supermercado</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
 
+  <main>
+    <section class="profile">
+      <img src="cat.webp" alt="Foto de perfil">
+      <p>Esta es mi primera página web</p>
+    </section>
 
-    <p>Esta es mi primera pagina web</p>
+    <section class="tasks">
+      <div class="task-list">
+        <h2>Deberes de hoy</h2>
+        <ul>
+          <li>Matemáticas</li>
+          <li>Física</li>
+          <li>Química</li>
+        </ul>
+      </div>
+      <div class="task-list">
+        <h2>Otros deberes</h2>
+        <ul>
+          <li>Fisic</li>
+          <li>Matmatic</li>
+          <li>Fishes</li>
+        </ul>
+      </div>
+    </section>
 
-  </div>
-  <h2>Deberes para hoy</h2>
-  <ul>
-    <li>matematicas</li>
-    <li>fisica</li>
-    <li>qumimica</li>
-  </ul>
+    <section class="image-section">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6g9BULWRAKU_yquei3FoQlYKkEzC5NibTHw&s" alt="Imagen bonita">
+    </section>
+  </main>
 
-  <ul>
-    <li>fisic</li>
-    <li>matmatic</li>
-    <li>fishes</li>
-    
-  </ul>
-  <div>
+  <footer>
+    <h2>Gracias</h2>
+    <p>End of page</p>
+  </footer>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6g9BULWRAKU_yquei3FoQlYKkEzC5NibTHw&s" alt="">
-
-  </div>
-
-
-  <a href="https://supermercado.eroski.es/"></a>
-
-   <h1>End of page </h1>
-   <H2>Gracias</H2>
-
-  
 </body>
 </html>
