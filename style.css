@@ -1,20 +1,126 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General body styles */
 body {
-  background-color: rgb(177, 237, 237);
-  padding: 16px;
-
-
+  margin: 0;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb);
+  color: #2c3e50;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
 }
 
-h1{
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Headings */
+h1, h2 {
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 42px;
-  color: rgb(2, 22, 22);
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
+h1 {
+  font-size: 46px;
+  color: #0a3d62;
+}
+
+h2 {
+  font-size: 28px;
+  color: #e17055;
+}
+
+/* Profile image */
 .imagen_perfil {
-  width: 300px;
-  height: 300px;
-  border-radius: 25%;
+  display: block;
+  margin: 20px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.imagen_perfil:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}
+
+/* Paragraphs */
+p {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0 25px;
+  color: #34495e;
+}
+
+/* Card style container */
+.card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Lists */
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  padding: 12px;
+  margin: 8px 0;
+  background: #ffeaa7;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+  background: #fdcb6e;
+  transform: scale(1.02);
+}
+
+/* Links (modern button style) */
+a {
+  display: inline-block;
+  margin: 20px auto;
+  color: #fff;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 25px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 14px;
+  color: #2c3e50;
+  font-size: 15px;
+}
